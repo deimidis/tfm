@@ -1,0 +1,23 @@
+{
+  "name": "tfm-ong",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "keywords": [
+    "ciberseguridad",
+    "ong",
+    "nonprofit",
+    "seguridad"
+  ],
+  "author": "",
+  "license": "CC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

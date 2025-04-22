@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} - {% endif %}CyberShield ONG</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>CyberShield ONG</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/" {% if page.url == '/' %}class="active"{% endif %}>Inicio</a></li>
+                    <li><a href="/blog/" {% if page.url.includes('/blog/') %}class="active"{% endif %}>Novedades</a></li>
+                    <li><a href="/download/" {% if page.url == '/download/' %}class="active cta-button"{% else %}class="cta-button"{% endif %}>Descargar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CyberShield ONG. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

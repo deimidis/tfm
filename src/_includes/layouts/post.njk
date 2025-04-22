@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="blog-header">
+    <div class="container">
+        <h2>{{ title }}</h2>
+        <p class="post-meta">Publicado el {{ date | formatDate }}</p>
+    </div>
+</section>
+
+<section class="blog-content">
+    <div class="container">
+        <article class="post">
+            {{ content | safe }}
+
+            <div class="post-navigation">
+                <a href="/blog/" class="back-to-blog">← Volver al blog</a>
+            </div>
+        </article>
+    </div>
+</section>

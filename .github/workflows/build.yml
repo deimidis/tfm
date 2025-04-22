@@ -29,17 +29,15 @@ jobs:
         with:
           node-version: "18"
       - name: Install dependencies
-        working-directory: ./tfm-ong
         run: npm ci
       - name: Build
-        working-directory: ./tfm-ong
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./tfm-ong/_site
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

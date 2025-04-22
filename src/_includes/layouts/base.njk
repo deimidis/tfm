@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if title %}{{ title }} - {% endif %}Trabajo Final Maestría</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/responsive.css' | url }}">
 </head>
 <body>
     <header>
@@ -15,9 +15,9 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="/" {% if page.url == '/' %}class="active"{% endif %}>Inicio</a></li>
-                    <li><a href="/blog/" {% if page.url.includes('/blog/') %}class="active"{% endif %}>Novedades</a></li>
-                    <li><a href="/download/" {% if page.url == '/download/' %}class="active cta-button"{% else %}class="cta-button"{% endif %}>Descargar</a></li>
+                    <li><a href="{{ '/' | url }}" {% if page.url == '/' %}class="active"{% endif %}>Inicio</a></li>
+                    <li><a href="{{ '/blog/' | url }}" {% if page.url.includes('/blog/') %}class="active"{% endif %}>Novedades</a></li>
+                    <li><a href="{{ '/download/' | url }}" {% if page.url == '/download/' %}class="active cta-button"{% else %}class="cta-button"{% endif %}>Descargar</a></li>
                 </ul>
             </nav>
         </div>
